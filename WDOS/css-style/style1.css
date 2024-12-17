@@ -1,0 +1,131 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: floralwhite;
+    color: black;
+    padding: 0.6rem;
+}
+
+header, footer {
+    width: 100%;
+    background-color: #e35036;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid black;
+}
+
+h3 {
+    background-color: #efae53;
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+.recipe_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+.recipe {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    background-color: #ffebee;
+    border: 2px solid #a53b28;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.recipe img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.recipe:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.Popular-recipes {
+    background-color: #f3e5f5;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 3px;
+    border: 1px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+}
+
+h2 {
+    background-color: #9cd0d7;
+    border-radius: 5px;
+    padding: 0.6rem;
+    margin: 0.6rem;
+}
+
+/* Mobile and Tablet View - Collapsed Table */
+table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: #f3e5f5;
+    line-height: 2rem;
+}
+
+thead {
+    display: none;
+}
+
+td {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+}
+
+td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Desktop View - Standard Table */
+@media screen and (min-width: 1100px) {
+    table {
+        display: table;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    th, td {
+        display: table-cell;
+        padding: 0.6rem;
+    }
+
+    th {
+        font-weight: bold;
+        background-color: #d3d3d3; /* Adjust for your theme */
+    }
+
+    td::before {
+        display: none;
+    }
+}
+

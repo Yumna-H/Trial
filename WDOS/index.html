@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="css-style/favicon/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="css-style/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="css-style/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="css-style/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Recipes" />
+    <link rel="manifest" href="css-style/manifest.json" />
+    <link rel="stylesheet" href="css-style/style.css">
+    <title>Recipes</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Recipies</h1>
+        </nav>
+    </header>
+    <main>
+        <section class="all_recipes">
+            <div class="recipe_grid">
+                <div class="recipe">
+                    <h3>Crispy Cheddar Chicken</h3>
+                    <img src="Images/crispy_cheddar_chicken.jpg" alt="Recipe of crispy cheddar chicken">
+                    <p><b>Chef's name: </b>John Doe</p>
+                    <p><b>Prep Time: </b>40 minutes</p>
+                    <p><b>Difficulty: </b>Medium</p>
+                </div>
+                <div class="recipe">
+                    <h3>Lemon Crepes With Almond Flakes and Maple Syrup</h3>
+                    <img src="Images/crepes.jpg" alt="Recipe of crepes">
+                    <p><b>Chef's name: </b>Emily Smith</p>
+                    <p><b>Prep Time: </b>35 minutes</p>
+                    <p><b>Difficulty: </b>Easy</p>
+                </div>
+                <div class="recipe">
+                    <h3>Avocado Toast</h3>
+                    <img src="Images/avocadotoast.jpg" alt="Recipe of avocado toast">
+                    <p><b>Chef's name: </b>Tom</p>
+                    <p><b>Prep Time: </b>5 minutes</p>
+                    <p><b>Difficulty: </b>Medium</p>
+                </div>
+                <div class="recipe">
+                    <h3>Pasta Parmesan</h3>
+                    <img src="Images/pasta_parmesan.jpg" alt="Recipe of pasta parmesan">
+                    <p><b>Chef's name: </b>Ellie</p>
+                    <p><b>Prep Time: </b>10 minutes</p>
+                    <p><b>Difficulty: </b>Hard</p>
+                </div>
+                <div class="recipe">
+                    <h3>Chocolate Chip Cookies</h3>
+                    <img src="Images/cookies.jpg" alt="Recipe of cookies">
+                    <p><b>Chef's name: </b>Chloe Williams</p>
+                    <p><b>Prep Time: </b>15 minutes</p>
+                    <p><b>Difficulty: </b>Easy</p>
+                </div>
+                <div class="recipe">
+                    <h3>Chocolate Chip Cookies</h3>
+                    <img src="Images/smores.jpg" alt="Recipe of smores">
+                    <p><b>Chef's name: </b>Jane Liam</p>
+                    <p><b>Prep Time: </b>5 minutes</p>
+                    <p><b>Difficulty: </b>Easy</p>
+                </div>
+            </div>
+        </section>
+        <section class="Popular-recipes">
+            <h2>Popular Recipes of the Week</h2>
+            <div class="table-container">
+                <table class="popular-recipe">
+                    <thead>
+                        <tr>
+                            <th>Recipe Name</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Recipe Name: ">Crispy Cheddar Chicken</td>
+                            <td data-label="Category: ">Main Course</td>
+                            <td data-label="Description: ">A delicious chicken recipe with a crispy cheddar coating.</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Recipe Name: ">Chocolate Chip Cookies</td>
+                            <td data-label="Category: ">Dessert</td>
+                            <td data-label="Description: ">Classic homemade cookies with rich chocolate chips.</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Recipe Name: ">Marshmallow Smores</td>
+                            <td data-label="Category: ">Dessert</td>
+                            <td data-label="Description: ">Gooey marshmallows and chocolate sandwiched between graham crackers.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="form">
+            <h2>Submit Your Recipe</h2>
+            <form class="recipe-form">
+                <label for="recipe-name">Recipe Name:</label><br>
+                <input type="text" id="recipe-name" name="recipe-name" placeholder="Enter recipe name" required><br>
+
+                <label for="ingredients">Ingredients:</label><br>
+                <textarea id="ingredients" name="ingredients" rows="4" cols="40" placeholder="List the ingredients: " required></textarea><br>
+
+                <label for="steps">Preparation Steps:</label><br>
+                <textarea id="steps" name="steps" rows="6" cols="40" placeholder="Describe the steps: " required></textarea><br>
+
+                <label for="difficulty">Difficulty Level:</label><br>
+                <select id="difficulty" name="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select><br>
+
+                <label for="email">Your Email (optional):</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter your email"><br>
+
+                <button type="submit">Submit Recipe</button>
+                <button type="reset">Reset</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Recipes. All rights reserved.</p>
+    </footer>
+</body>
+</html>
